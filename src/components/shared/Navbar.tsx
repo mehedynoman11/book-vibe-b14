@@ -5,7 +5,10 @@ import Link from 'next/link';
 
 const Navbar = () => {
     const links = <>
-    <Link href={'/books'}>Books</Link>
+    <li><Link href={'/books'}>Books</Link></li>
+    <li><Link href={'/listedbooks'}>Listed Books</Link></li>
+    
+    
     </>
 
     return (
@@ -23,8 +26,8 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <Link href={'/'} className='flex gap-2 items-center'>
-                        <Image src={logo} alt='Logo'/>
-                        <button className="btn-ghost text-xl">Book Vibe</button>
+                        <Image className='w-6 sm:w-10' width={50} height={50} src={logo} alt='Logo'/>
+                        <button className="btn-ghost btn-sm sm:btn-lg text-sm sm:text-lg md:text-xl">Book Vibe</button>
                     </Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">

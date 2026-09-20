@@ -1,3 +1,5 @@
+import ReadBook from '@/components/bookDetails/ReadBook';
+import WishList from '@/components/bookDetails/Wishlist';
 import { IBook } from '@/type/bookType';
 import Image from 'next/image';
 import React from 'react';
@@ -29,6 +31,7 @@ const PageDetailsPage = async ({ params }: PageDetailsPageProps) => {
                         alt={book.bookName}
                         width={350}
                         height={500}
+                        loading='eager'
                         className="h-100 w-auto object-contain rounded-lg shadow-md"
                     />
                 </div>
@@ -66,8 +69,8 @@ const PageDetailsPage = async ({ params }: PageDetailsPageProps) => {
                         </p>
                     </div>
                     <div className="flex justify-start items-center gap-6 mt-8">
-                        <button className="btn btn-outline">Read</button>
-                        <button className="btn btn-accent">Whitelist</button>
+                        <ReadBook book={book}/>
+                        <WishList book={book}/>
                     </div>
                 </div>
             </div>
