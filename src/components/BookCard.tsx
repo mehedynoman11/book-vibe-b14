@@ -17,6 +17,7 @@ const BookCard = ({ book }: BookCardProps) => {
                     alt={book.bookName}
                     width={800}
                     height={600}
+                    loading='eager'
                     className="w-auto object-cover transition-transform duration-300 group-hover:scale-105"
                 />
 

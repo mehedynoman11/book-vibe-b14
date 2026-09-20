@@ -26,7 +26,7 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <Link href={'/'} className='flex gap-2 items-center'>
-                        <Image className='w-6 sm:w-10' width={50} height={50} src={logo} alt='Logo'/>
+                        <Image className='w-6 sm:w-10' loading='eager' width={50} height={50} src={logo} alt='Logo'/>
                         <button className="btn-ghost btn-sm sm:btn-lg text-sm sm:text-lg md:text-xl">Book Vibe</button>
                     </Link>
                 </div>
