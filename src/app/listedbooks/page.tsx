@@ -1,7 +1,7 @@
 'use client'
 import ListBookCard from '@/components/ListedBookCard';
 import { BookContext } from '@/context/bookContext';
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { IBook } from '@/type/bookType';
 
 const ListedBooks = () => {

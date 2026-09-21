@@ -2,7 +2,19 @@
 import { IBook } from '@/type/bookType';
 import React, { createContext, useState } from 'react';
 
-export const BookContext = createContext({});
+interface IBookContext {
+  read: IBook[];
+  setRead: React.Dispatch<React.SetStateAction<IBook[]>>;
+  wishlist: IBook[];
+  setWishlist: React.Dispatch<React.SetStateAction<IBook[]>>;
+}
+
+export const BookContext = createContext<IBookContext>({
+    read: [],
+    setRead: ()=>{},
+    wishlist: [],
+    setWishlist: ()=>{},
+});
 
 const BookProvider = ({ children }:{children:React.ReactNode}) => {
 

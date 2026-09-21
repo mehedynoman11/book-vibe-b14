@@ -1,5 +1,4 @@
 import { IBook } from '@/type/bookType';
-import React from 'react';
 import BookCard from '../BookCard';
 
 export const getBook = async () => {
@@ -9,7 +8,7 @@ export const getBook = async () => {
     }
     return res.json();
 }
-const Book = async () => {
+const BookHomePage = async () => {
     const bookData:IBook[] = await getBook();
 
     return (
@@ -26,4 +25,4 @@ const Book = async () => {
     );
 };
 
-export default Book;
+export default BookHomePage;

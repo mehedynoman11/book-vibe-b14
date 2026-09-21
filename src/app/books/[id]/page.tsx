@@ -2,7 +2,6 @@ import ReadBook from '@/components/bookDetails/ReadBook';
 import WishList from '@/components/bookDetails/Wishlist';
 import { IBook } from '@/type/bookType';
 import Image from 'next/image';
-import React from 'react';
 
 interface PageDetailsPageProps {
     params: Promise<{ id: string }>;

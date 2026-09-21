@@ -1,4 +1,3 @@
-import React from "react";
 import type { IBook } from "@/type/bookType";
 import Image from "next/image";
 

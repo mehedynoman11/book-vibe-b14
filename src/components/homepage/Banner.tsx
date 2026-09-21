@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import React from 'react';
 import bannerImg from "@/assets/hero_img.jpg"
 
 const Banner = () => {
@@ -29,6 +28,7 @@ const Banner = () => {
                         src={bannerImg}
                         alt="Banner"
                         width={400}
+                        loading='eager'
                         className="w-full max-w-75 sm:max-w-87.5 md:max-w-100 h-auto"
                     />
                 </div>
