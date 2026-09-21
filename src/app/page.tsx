@@ -1,12 +1,14 @@
 import { IBook } from '@/type/bookType';
 import BookCard from '@/components/BookCard';
+import booksData from '../../public/booksData.json'
 
 export const getBook = async () => {
-    const res = await fetch(`https://book-vibe-b14-mr9hb4n8u-mehedynoman11s-projects.vercel.app/booksData.json`);
-    if(!res.ok) {
-      throw new Error("Couldn't fetch data");
-    }
-    return res.json();
+    // const res = await fetch(`${process.env.NEXT_PUBLIC_LOCAL_SERVER}/booksData.json`);
+    // if(!res.ok) {
+    //   throw new Error("Couldn't fetch data");
+    // }
+    // return res.json();
+    return booksData;
 }
 const BookHomePage = async () => {
     const bookData:IBook[] = await getBook();
