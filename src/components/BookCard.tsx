@@ -79,7 +79,7 @@ const BookCard = ({ book }: BookCardProps) => {
                 </div>
 
                 {/* Button */}
-                <Link href={`http://localhost:3000/books/${book.bookId}`}>
+                <Link href={`${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/books/${book.bookId}`}>
                     <button className="btn btn-success w-full rounded-xl">
                         View Details
                     </button>

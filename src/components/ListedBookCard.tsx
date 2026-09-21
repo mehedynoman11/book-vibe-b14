@@ -1,5 +1,6 @@
 import type { IBook } from "@/type/bookType";
 import Image from "next/image";
+import Link from "next/link";
 
 interface ListBookCardProps {
   book: IBook;
@@ -80,10 +81,11 @@ const ListBookCard = ({ book }:ListBookCardProps) => {
           <p className="line-clamp-2 text-sm text-base-content/60">
             {book.review}
           </p>
-
+          <Link href={`${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/books/${book.bookId}`}>
           <button className="btn btn-success shrink-0 rounded-xl px-6">
             View Details
           </button>
+          </Link>
         </div>
 
       </div>
