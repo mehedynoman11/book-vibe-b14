@@ -3,9 +3,6 @@ import BookCard from '@/components/BookCard';
 
 export const getBook = async () => {
     const res = await fetch(`${process.env.NEXT_PUBLIC_LOCAL_SERVER}/booksData.json`);
-    if(!res.ok) {
-      throw new Error("Couldn't fetch data");
-    }
     return res.json();
 }
 const BookPage = async () => {
