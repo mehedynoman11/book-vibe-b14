@@ -10,7 +10,9 @@ interface PageDetailsPageProps {
 export const getBook = async () => {
     try {
         const response = await fetch(`
-        ${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/booksData.json`,
+        ${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/booksData.json`,{
+            cache: "force-cache"
+        }
         );
         const data = await response.json();
         return data;
