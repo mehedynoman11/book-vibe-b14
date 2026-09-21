@@ -2,12 +2,18 @@ import { IBook } from '@/type/bookType';
 import BookCard from '@/components/BookCard';
 
 export const getBook = async () => {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_LOCAL_SERVER}/booksData.json`);
-    if(!res.ok) {
-      throw new Error("Couldn't fetch data");
+    try {
+        const response = await fetch(`
+        ${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/booksData.json`,
+        );
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error("Error Fetching data", error);
+        return []
     }
-    return res.json();
 }
+
 const BookPage = async () => {
     const bookData:IBook[] = await getBook();
 
