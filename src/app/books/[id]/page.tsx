@@ -28,8 +28,8 @@ const PageDetailsPage = async ({ params }: PageDetailsPageProps) => {
     const book = bookData.find((book: IBook) => String(book.bookId) === String(id)) as IBook
     return (
         <div className='container mx-auto max-w-275 mt-5'>
-            <div className="flex justify-between gap-8 h-120">
-                <div className="flex justify-center items-center bg-gray-200 p-6 w-full overflow-hidden rounded-t-2xl">
+            <div className="flex flex-col md:flex-row px-4 md:px-0 justify-between gap-8 h-120">
+                <div className="flex justify-center items-center bg-gray-200 p-6 w-full rounded-t-2xl">
                     <Image
                         src={book.image}
                         alt={book.bookName}
@@ -39,7 +39,7 @@ const PageDetailsPage = async ({ params }: PageDetailsPageProps) => {
                         className="h-100 w-auto object-contain rounded-lg shadow-md"
                     />
                 </div>
-                <div className="text-left w-full mx-auto py-2">
+                <div className="text-center md:text-left w-full mx-auto py-2">
                     <h1 className='text-2xl font-bold'>{book.bookName}</h1>
                     <p className='mb-3'><span className='font-bold'>By: </span> {book.author}</p>
                     <div className='border-t border-gray-300' />
@@ -72,7 +72,7 @@ const PageDetailsPage = async ({ params }: PageDetailsPageProps) => {
                             <span className="font-medium">{book.rating}</span>
                         </p>
                     </div>
-                    <div className="flex justify-start items-center gap-6 mt-8">
+                    <div className="flex justify-center md:justify-start  items-center gap-6 mt-8">
                         <ReadBook book={book}/>
                         <WishList book={book}/>
                     </div>

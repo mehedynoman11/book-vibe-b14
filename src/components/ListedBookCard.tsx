@@ -6,9 +6,9 @@ interface ListBookCardProps {
   book: IBook;
 }
 
-const ListBookCard = ({ book }:ListBookCardProps) => {
+const ListBookCard = ({ book }: ListBookCardProps) => {
   return (
-    <div className="group flex w-full flex-col gap-5 rounded-2xl border border-base-200 bg-base-100 p-4 shadow-sm transition-all duration-300 hover:shadow-lg sm:flex-row">
+    <div className="group flex w-full flex-col md:flex-row gap-5 rounded-2xl border border-base-200 bg-base-100 p-4 shadow-sm transition-all duration-300 hover:shadow-lg">
 
       {/* Book Image */}
       <div className="flex h-64 w-full shrink-0 items-center justify-center overflow-hidden rounded-xl bg-base-200 sm:h-56 sm:w-40">
@@ -23,7 +23,7 @@ const ListBookCard = ({ book }:ListBookCardProps) => {
       </div>
 
       {/* Book Information */}
-      <div className="flex flex-1 flex-col justify-between gap-4">
+      <div className="flex flex-col justify-between gap-4">
 
         {/* Title */}
         <div>
@@ -81,14 +81,15 @@ const ListBookCard = ({ book }:ListBookCardProps) => {
           <p className="line-clamp-2 text-sm text-base-content/60">
             {book.review}
           </p>
-          <Link href={`${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/books/${book.bookId}`}>
-          <button className="btn btn-success shrink-0 rounded-xl px-6">
-            View Details
-          </button>
-          </Link>
-        </div>
 
+        </div>
+        <Link href={`${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/books/${book.bookId}`}>
+        <button className="btn btn-success shrink-0 rounded-xl px-6">
+          View Details
+        </button>
+      </Link>
       </div>
+      
     </div>
   );
 };

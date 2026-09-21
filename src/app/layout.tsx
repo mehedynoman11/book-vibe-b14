@@ -4,7 +4,6 @@ import "./globals.css";
 import Navbar from "@/components/shared/Navbar";
 import BookProvider from "@/context/bookContext";
 import { Bounce, ToastContainer } from "react-toastify";
-import Banner from "@/components/homepage/Banner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,7 +30,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <BookProvider>
         <body className="min-h-full flex flex-col">
           <Navbar />
-          <Banner />
           {children}
            <ToastContainer
           position="bottom-right"

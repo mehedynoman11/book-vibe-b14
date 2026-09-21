@@ -1,18 +1,19 @@
+'use client'
 import Image from 'next/image';
-import React from 'react';
 import logo from "@/assets/book.ico"
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const Navbar = () => {
+    const pathName = usePathname();
     const links = <>
-    <li><Link href={'/books'}>Books</Link></li>
-    <li><Link href={'/listedbooks'}>Listed Books</Link></li>
+    <li><Link className={`font-bold${pathName === '/books'? "border-b-blue-500 bg-blue-100 border-b-2 font-semibold" : ""}`} href={'/books'}>Books</Link></li>
+    <li><Link className={`font-bold${pathName === '/listedbooks'? "border-b-blue-500 bg-blue-100 border-b-2 font-semibold" : ""}`} href={'/listedbooks'}>Listed Books</Link></li>
     
     
     </>
-
     return (
-        <nav className='bg-base-100 shadow-sm px-4 sm:px-6 lg:px-0'>
+        <nav className='bg-base-100 shadow-sm px-4 sm:px-6 lg:px-0 sticky top-0 z-50'>
             <div className="navbar container mx-auto max-w-275">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -35,9 +36,9 @@ const Navbar = () => {
                         {links}
                     </ul>
                 </div>
-                <div className="navbar-end flex gap-2">
-                    <button className="btn btn-success text-white">Sign In</button>
-                    <button className="btn btn-error text-white">Sign Up</button>
+                <div className="navbar-end flex items-center gap-2">
+                    <button className="btn btn-success btn-xs sm:btn-lg text-white">Sign In</button>
+                    <button className="btn btn-error btn-xs sm:btn-lg text-white">Sign Up</button>
                 </div>
             </div>
         </nav>

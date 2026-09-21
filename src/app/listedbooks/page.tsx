@@ -10,7 +10,7 @@ const ListedBooks = () => {
     return (
         <section className='container mx-auto max-w-275 mt-10'>
             <div className="py-6 px-12 bg-gray-200 text-center">
-                <h1 className='text-3xl font-bold'>Books</h1>
+                <h1 className='text-3xl font-bold '>Books</h1>
             </div>
             <button className='btn btn-sm btn-info'>Sort By <span className='text-lg'>&#11206;</span></button>
             <div className="">

@@ -1,5 +1,6 @@
 import { IBook } from '@/type/bookType';
 import BookCard from '@/components/BookCard';
+import Banner from '@/components/homepage/Banner';
 
 export const getBook = async () => {
     try {
@@ -27,6 +28,7 @@ const BookHomePage = async () => {
                     )
                 })}
             </div>
+            <Banner />
         </div>
     );
 };

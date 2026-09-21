@@ -11,9 +11,8 @@ const Banner = () => {
 
                 {/* Text */}
                 <div className="space-y-5 text-center md:text-left">
-                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
-                        Books to freshen up
-                        <br className="hidden sm:block" />
+                    <h1 className="font-mono text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight">
+                        Books to freshen up<br/>
                         your bookshelf
                     </h1>
 
